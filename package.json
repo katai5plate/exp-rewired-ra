@@ -6,6 +6,7 @@
   "author": "katai5plate <katai5plate.sub@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ra-data-fakerest": "^3.0.0",
     "ra-data-json-server": "^3.0.0",
     "ra-data-simple-rest": "^3.0.0",
     "react": "^16.12.0",
