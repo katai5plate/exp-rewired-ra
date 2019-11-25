@@ -5,5 +5,7 @@ export default {
   name: "rand",
   list: RandList,
   show: ShowGuesser,
-  edit: EditGuesser
+  edit: EditGuesser,
+  create: void 0,
+  icon: void 0
 };

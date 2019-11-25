@@ -1,0 +1,2 @@
+// まだ
+export default () => {};

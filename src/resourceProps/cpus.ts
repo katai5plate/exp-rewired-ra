@@ -5,5 +5,7 @@ export default {
   name: "cpus",
   list: CpusList,
   show: ShowGuesser,
-  edit: EditGuesser
+  edit: EditGuesser,
+  create: void 0,
+  icon: void 0
 };

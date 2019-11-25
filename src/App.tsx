@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import jsonServerProvider from "ra-data-json-server";
 
 import { CoreAdmin } from "ra-core";
 import { createBrowserHistory as createHistory } from "history";
 
 import { cpusResourceProps, randResourceProps } from "./resourceProps";
 import { Dashboard, NotFound } from "./pages";
+import { localAPIProvider } from "./providers";
 
 import { Resource } from "react-admin";
 
@@ -14,7 +14,7 @@ const history = createHistory();
 
 const App: React.FC = () => (
   <CoreAdmin
-    dataProvider={jsonServerProvider("http://localhost:3333")}
+    dataProvider={localAPIProvider}
     history={history}
     dashboard={Dashboard}
     title="ERROR"
