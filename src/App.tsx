@@ -1,19 +1,17 @@
 import React from "react";
 import "./App.css";
 
-import { CoreAdmin } from "ra-core";
 import { createBrowserHistory as createHistory } from "history";
+import { Admin, Resource } from "react-admin";
 
 import { cpusResourceProps, randResourceProps } from "./resourceProps";
 import { Dashboard, NotFound } from "./pages";
 import { localAPIProvider } from "./providers";
 
-import { Resource } from "react-admin";
-
 const history = createHistory();
 
 const App: React.FC = () => (
-  <CoreAdmin
+  <Admin
     dataProvider={localAPIProvider}
     history={history}
     dashboard={Dashboard}
@@ -22,7 +20,7 @@ const App: React.FC = () => (
   >
     <Resource {...cpusResourceProps} />
     <Resource {...randResourceProps} />
-  </CoreAdmin>
+  </Admin>
 );
 
 export default App;
