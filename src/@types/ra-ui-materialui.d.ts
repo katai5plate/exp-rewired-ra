@@ -1,8 +1,5 @@
 declare module "ra-ui-materialui" {
   // require: @types/classnames
-  //          @types/react-router
-  //          @types/react-router-dom
-  //          @types/recompose
 
   import { ReactNodeLike } from "prop-types";
 
@@ -10,16 +7,17 @@ declare module "ra-ui-materialui" {
   type TSIncompleteComponent = React.ComponentType<any>;
   type TSDisCompilableComponent = React.ComponentType<any>;
 
-  export const Link: React.ComponentType<{
+  import defaultTheme from "ra-ui-materialui/src/defaultTheme";
+
+  const Link: React.ComponentType<{
     className?: string;
     children?: ReactNodeLike;
     to?: string | object;
   }>;
-  import defaultTheme from "ra-ui-materialui/src/defaultTheme";
-  export { defaultTheme };
+
+  export { Link, defaultTheme };
 
   // auth
-  // export * from "ra-ui-materialui/src/auth";
   export const Login: TSDisCompilableComponent;
   export const LoginForm: TSDisCompilableComponent;
   export * from "ra-ui-materialui/src/auth/Logout";
