@@ -1,8 +1,14 @@
 declare module "ra-ui-materialui" {
+  // require: @types/classnames
+  //          @types/react-router
+  //          @types/react-router-dom
+  //          @types/recompose
+
   import { ReactNodeLike } from "prop-types";
 
   type JSComponent = React.ComponentType<any>;
   type TSIncompleteComponent = React.ComponentType<any>;
+  type TSDisCompilableComponent = React.ComponentType<any>;
 
   export const Link: React.ComponentType<{
     className?: string;
@@ -13,7 +19,10 @@ declare module "ra-ui-materialui" {
   export { defaultTheme };
 
   // auth
-  export * from "ra-ui-materialui/src/auth";
+  // export * from "ra-ui-materialui/src/auth";
+  export const Login: TSDisCompilableComponent;
+  export const LoginForm: TSDisCompilableComponent;
+  export * from "ra-ui-materialui/src/auth/Logout";
 
   // button
   export const BulkDeleteButton: JSComponent;
@@ -52,20 +61,20 @@ declare module "ra-ui-materialui" {
 
   // field
   export * from "ra-ui-materialui/src/field/types";
-  export * from "ra-ui-materialui/src/field/ArrayField";
-  export * from "ra-ui-materialui/src/field/BooleanField";
-  export * from "ra-ui-materialui/src/field/ChipField";
-  export * from "ra-ui-materialui/src/field/DateField";
+  export const ArrayField: TSDisCompilableComponent;
+  export const BooleanField: TSDisCompilableComponent;
+  export const ChipField: TSDisCompilableComponent;
+  export const DateField: TSDisCompilableComponent;
   export const EmailField: TSIncompleteComponent;
-  export * from "ra-ui-materialui/src/field/FileField";
-  export * from "ra-ui-materialui/src/field/ImageField";
+  export const FileField: TSDisCompilableComponent;
+  export const ImageField: TSDisCompilableComponent;
   export const FunctionField: TSIncompleteComponent;
-  export * from "ra-ui-materialui/src/field/NumberField";
+  export const NumberField: TSDisCompilableComponent;
   export const ReferenceField: JSComponent;
   export const ReferenceArrayField: JSComponent;
   export const ReferenceManyField: JSComponent;
   export const RichTextField: TSIncompleteComponent;
-  export * from "ra-ui-materialui/src/field/SelectField";
+  export const SelectField: TSDisCompilableComponent;
   export const TextField: TSIncompleteComponent;
   export const UrlField: TSIncompleteComponent;
 
@@ -84,13 +93,13 @@ declare module "ra-ui-materialui" {
   ): any;
 
   // input
-  export * from "ra-ui-materialui/src/input/ArrayInput";
+  export const ArrayInput: TSDisCompilableComponent;
   export const AutocompleteArrayInput: TSIncompleteComponent;
   export const AutocompleteInput: TSIncompleteComponent;
   export const BooleanInput: TSIncompleteComponent;
   export const CheckboxGroupInput: TSIncompleteComponent;
-  export * from "ra-ui-materialui/src/input/DateInput";
-  export * from "ra-ui-materialui/src/input/DateTimeInput";
+  export const DateInput: TSDisCompilableComponent;
+  export const DateTimeInput: TSDisCompilableComponent;
   export const FileInput: TSIncompleteComponent;
   export const ImageInput: TSIncompleteComponent;
   export const InputHelperText: TSIncompleteComponent;
@@ -98,14 +107,14 @@ declare module "ra-ui-materialui" {
   export const Labeled: TSIncompleteComponent;
   export const NullableBooleanInput: TSIncompleteComponent;
   export const NumberInput: TSIncompleteComponent;
-  export * from "ra-ui-materialui/src/input/RadioButtonGroupInput";
+  export const RadioButtonGroupInput: TSDisCompilableComponent;
   export const ReferenceArrayInput: JSComponent;
-  export * from "ra-ui-materialui/src/input/ReferenceInput";
+  export const ReferenceInput: TSDisCompilableComponent;
   export const ResettableTextField: JSComponent;
   export const SearchInput: TSIncompleteComponent;
   export const SelectArrayInput: TSIncompleteComponent;
   export const SelectInput: TSIncompleteComponent;
-  export * from "ra-ui-materialui/src/input/TextInput";
+  export const TextInput: TSDisCompilableComponent;
 
   // layout
   export const AppBar: JSComponent;
